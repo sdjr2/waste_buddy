@@ -1,6 +1,61 @@
-.navbar-brand{
-    left: 50%;
-}
-.login{
+#pageTitle{
+    padding-top: 100px;
     color: white;
+    margin: 0 auto;
+}
+#login{
+    color: white;
+    position: absolute;
+    right: 1%;
+    bottom: 5%;
+}
+#bigBox{
+    border: black;
+    border-style: solid;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+    height: 300px;
+}
+#smallBox{
+    border: black;
+    border-style: solid;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+    height: 150px;
+}
+#boxTitle{
+    padding: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+#sortingGameStart{
+    border: black;
+    border-style: solid;
+    text-align: center;
+    width: 150px;
+    margin: 0 auto;
+}
+#binBox{
+    text-align: center;
+}
+#binPic{
+    height: 120px;
+    width: 400px;
+}
+#searchBox{
+    border: black;
+    border-style: solid;
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+}
+#searchImage{
+    max-width: 50%;
+}
+#searchText{
+    max-width: 40%;
 }
