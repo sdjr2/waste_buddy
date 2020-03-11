@@ -25,37 +25,41 @@
     width: 80%;
     height: 150px;
 }
-#boxTitle{
+#boxTitle {
     padding: 50px;
     text-align: center;
     font-size: 50px;
 }
-#sortingGameStart{
+#sortingGameStart {
     border: black;
     border-style: solid;
     text-align: center;
     width: 150px;
     margin: 0 auto;
 }
-#binBox{
+#binBox {
     text-align: center;
 }
-#binPic{
+#binPic {
     height: 120px;
     width: 400px;
 }
-#searchBox{
+
+#searchBox {
     border: black;
     border-style: solid;
-    width: 250px;
-    height: 40px;
-    margin: 0 auto;
+    width: 350px;
+    height: 60px;
+    margin: auto;
     font-size: 30px;
     text-align: center;
 }
-#searchImage{
+
+#searchImage {
     max-width: 50%;
+    display: inline-block;
 }
-#searchText{
-    max-width: 40%;
+#searchText {
+    max-width: 50%;
+    display: inline-block;
 }
