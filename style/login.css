@@ -1,0 +1,11 @@
+#title{
+    padding: 5%;
+    font-size: 60px;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+#background{
+    background-image: url("images/background.jpg");
+    
+}
