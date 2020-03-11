@@ -6,6 +6,6 @@
     -webkit-text-stroke-color: black;
 }
 #background{
-    background-image: url("images/background.jpg");
+    background-image: url("../images/background.jpg");
     
 }
