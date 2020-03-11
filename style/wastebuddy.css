@@ -1,5 +1,5 @@
 #pageTitle{
-    padding-top: 100px;
+    padding-top: 40px;
     color: white;
     margin: 0 auto;
 }
@@ -62,4 +62,44 @@
 #searchText {
     max-width: 50%;
     display: inline-block;
+}
+#searchText{
+    max-width: 40%;
+}
+#welcomeMessage{
+    top: 30%;
+    text-align: center;
+    font-size: 30px;
+}
+#previousScore{
+    position: absolute;
+    left: 170px;
+}
+#itemName{
+    position: absolute;
+    left: 10px;
+}
+#itemImage{
+    height:15%;
+    position: absolute;
+    top:20%;
+    left:45%;
+    
+}
+#itemImage1{
+    height:15%;
+    position: absolute;
+    top:20%;
+    left:48%;
+    
+}
+#bins{
+    position: absolute;
+    bottom:10%;
+    height:20%;
+}
+#scoreBoard{
+    position: absolute;
+    bottom:5%;
+    color: white;
 }
