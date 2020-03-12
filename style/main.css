@@ -1,4 +1,4 @@
-body {
+body{
     background-image: url("../images/background2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,13 +9,6 @@ body {
     padding-top: 40px;
     color: white;
     margin: 0 auto;
-}
-
-#login {
-    color: white;
-    position: absolute;
-    right: 1%;
-    bottom: 5%;
 }
 
 #bigBox {
@@ -43,6 +36,7 @@ body {
 }
 
 #sortingGameStart {
+    font-size: 25px;
     border: black;
     border-style: solid;
     text-align: center;
@@ -90,6 +84,8 @@ body {
 }
 
 #previousScore {
+    padding: 0px;
     position: absolute;
     left: 170px;
+    font-size: 20px;
 }
