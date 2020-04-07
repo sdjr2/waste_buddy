@@ -1,43 +1,97 @@
-#pageTitle{
+#pageTitle {
     padding-top: 40px;
     color: white;
     margin: 0 auto;
 }
 
 
-#itemName{
+#itemName {
     position: absolute;
     left: 10px;
 }
-#itemImage{
-    height:15%;
+
+#itemImage {
+    height: 15%;
     position: absolute;
-    top:20%;
-    left:45%;
-    
+    top: 20%;
+    left: 45%;
+
 }
-#itemImage1{
-    height:15%;
+
+#itemImage1 {
+    height: 15%;
     position: absolute;
-    top:20%;
-    left:48%;
-    
+    top: 20%;
+    left: 48%;
+
 }
-#bins{
+
+#binWrapper{
     position: absolute;
-    bottom:10%;
-    height:20%;
+    bottom: 20%;
+    width: 100%;
 }
-#scoreBoard{
+
+#binDiv {
+    text-align: center;
+}
+
+#individualBinDiv{
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 1vh;
+}
+
+#scoreBoardWrapper{
+    border: solid 5px violet;
     position: absolute;
-    bottom:5%;
+    bottom: 0;
+    width: 100%;
+}
+
+#scoreBoardNav {
+    border: solid 5px red;
+    height: 10vh;
     color: white;
 }
-#scoreTitle{
+
+#scoreDiv{
+    display: flex;
+}
+
+#leaderboardDiv{
+    border: solid 5px red;
+    margin: 8vh;
+}
+
+#howtoDiv{
+    width: 5%;
+    height: 50%
+}
+
+.circle{
+    border: solid 1px grey;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 8vh;
+}
+
+#sortingGameStart {
     font-size: 2vh;
     font-size: 2vw;
 }
-#sortingGameStart{
-    font-size: 2vh;
-    font-size: 2vw;
+
+.scoreBox{
+    border: solid 1px grey;
+}
+
+.bottomClass{
+    border: solid 1px blue;
+    display: inline-block;
+}
+
+.bins{
+    width: 8vh;
+    height: 12vh;
 }

@@ -29,15 +29,49 @@
     <img id="itemImage1" src="images/coffeecup.png">
   </div>
 
+  <div id="binWrapper">
+    <div id="binDiv">
+      <div id="individualBinDiv">
+        <img class = "bins" id="recyclables" src="images/Recyclables.png" alt="recyclables bin"> <br>
+        <p>Recyclable</p>
+      </div>
+      <div id="individualBinDiv">
+        <img class = "bins" id="refundables" src="images/Refundables.png" alt="refundables bin">
+        <p>Refundable</p>
+      </div>
+      <div id="individualBinDiv">
+        <img class = "bins" id="compost" src="images/Compost.png" alt="compost bin">
+        <p>Compost</p>
+      </div>
+      <div id="individualBinDiv">
+        <img class = "bins" id="mixed paper" src="images/Mixed Paper.png" alt="mixed paper bin">
+        <p>Mixed Paper</p>
+      </div>
+    </div>
+  </div>
+
   <!--This is the navbar for the scoreboard-->
-  <nav id="scoreBoard" class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div>
-      <h1>Score</h1>
-    </div>
-    <div>
-      <a href="#" id="login">Login</a>
-    </div>
-  </nav>
+  <div id="scoreBoardWrapper">
+    <nav id="scoreBoardNav" class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div id="scoreDiv">
+        <div class="scoreBox" id="currentScore">
+          current score
+        </div>
+        <div class="scoreBox" id="highestScore">
+          highest score
+        </div>
+      </div>
+      <div class="circle" id="howtoDiv">
+        ?
+      </div>
+      <div class="circle" id="restartDiv">
+        restart
+      </div>
+      <div id="leaderboardDiv">
+        view leaderboard
+      </div>
+    </nav>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
