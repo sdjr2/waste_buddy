@@ -25,69 +25,11 @@
 
                 list_div.innerHTML += "<table>" + "<tr>" + "<td>" + doc.data().username + ": " + "</td>" +
                     "<td>" + doc.data().score + "</td>" + "</tr>" + "</table>"
-
-
+                    
             });
         });
 
-
-    /**
-    //holds all player objects in the leaderboard
-        let leaderboard = [];
-
-        //used with the sort method for leaderboard to place high scores first
-        function compare(a, b) {
-            const scoreA = a.score;
-            const scoreB = b.score;
-
-            return scoreB - scoreA;
-        }
-
-        //retrieves the leaderboard scores and sorts them
-        function displayleaderboard() {
-            var table = document.createElement("table");
-            table.id="leaderboard";
-        
-            db.collection("users").get().then(function (snap) {
-                snap.forEach(function (doc) {
-                    leaderboard.push(doc.data());
-                    
-                });
-            }).then(function () {
-                leaderboard.sort(compare);
-                for (let i = 0; i < 10 ; i++) {
-                    
-                    var tr = document.createElement('tr');
-                    tr.id="row1";
-                   
-                   var td3 = document.createElement('td');
-                   td3.id="cell3";
-                   var td1 = document.createElement('td');
-                   td1.id="cell1";
-                   
-
-                   var td2 = document.createElement('td');
-                   td2.id="cell2";
-                 
-                  var text3=document.createTextNode(i+1);
-                  var text1 = document.createTextNode(leaderboard[i].username);
-                  var text2 = document.createTextNode(leaderboard[i].score);
-                 
-                  td3.appendChild(text3);
-                  td1.appendChild(text1);
-                  td2.appendChild(text2);
-                
-                  tr.appendChild(td3);
-                  tr.appendChild(td1);
-                  tr.appendChild(td2);
-                  table.appendChild(tr);
-                }               
-            })
-            document.body.appendChild(table);
-        }
-        displayleaderboard();
-    */
-           
+  
     </script>
 </body>
 </html>
