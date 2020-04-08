@@ -10,100 +10,11 @@
     left: 10px;
 }
 
-<<<<<<< HEAD
-#itemImage {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 45%;
-
-}
-
-#itemImage1 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage2 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage3 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage4 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage5 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage6 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage7 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage8 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage9 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-}
-
-#itemImage10 {
-    height: 15%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    display: none;
-=======
 #itemDiv{
     margin: 0 auto;
     width: 50%;
     height: 200px;
     text-align: center;
->>>>>>> 42a38349b44ceebb7fdb9f958928f0a30e332818
 }
 
 #itemImage11 {
