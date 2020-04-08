@@ -1,9 +1,9 @@
 // Array of items
 let items = ["itemImage1", "itemImage2", "itemImage3", "itemImage4", "itemImage5", "itemImage6", "itemImage7", "itemImage8", "itemImage9", "itemImage10", "itemImage11"];
-let itemName = ["Item: null", "Item: Coffee Cup", "Item: Milk Container", "Item: Fish", "Item: Fruits", "Item: Paper Plate", "Item: Juice Box", "Item: Pop Can", "Item: Water Bottle", "Item: Newsprint", "Item: Books"];
+let itemName = ["Item: null", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
 
 let score = 0;
-let life = 7;
+let life = 3;
 
 // Randomizes words
 let chosenItem = Math.floor(Math.random() * items.length);
@@ -16,8 +16,6 @@ function randomItem() {
     // Displays image
     document.getElementById(items[chosenItem]).style.display = "block";
 
-// Displays name
-document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
     // Displays name
     document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
 
@@ -38,6 +36,7 @@ function checkRecyclables() {
         life--;
         death();
     }
+    document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
@@ -53,6 +52,7 @@ function checkCompost() {
         life--;
         death();
     }
+    document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
@@ -68,6 +68,7 @@ function checkRefundables() {
         life--;
         death();
     }
+    document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
@@ -83,17 +84,12 @@ function checkMixedPaper() {
         life--;
         death();
     }
+    document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
 }
 
-function resetGame(){
-    score = 0;
-    document.getElementById("currentScore").innerHTML = "Score: " + score;
-
-    document.getElementById(items[chosenItem]).style.display = "none";
-    randomItem();
 function death() {
     if (life==0){
         alert("GAME OVER!");
@@ -102,4 +98,3 @@ function death() {
 
 randomItem();
 
-document.getElementById("restartBtn").onclick = resetGame;

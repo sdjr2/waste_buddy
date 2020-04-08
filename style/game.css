@@ -10,6 +10,11 @@
     left: 10px;
 }
 
+#life {
+    position: absolute;
+    right: 15px;
+}
+
 #itemDiv{
     margin: 0 auto;
     width: 50%;
