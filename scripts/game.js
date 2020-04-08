@@ -18,6 +18,8 @@ function randomItem() {
 
     // Displays name
     document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
+    // Displays name
+    document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
 
     // Clicking and check if item is correct
     document.getElementById("recyclables").onclick = checkRecyclables;
@@ -100,6 +102,14 @@ function checkMixedPaper() {
     }
     document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
+    document.getElementById(items[chosenItem]).style.display = "none";
+    randomItem();
+}
+
+function resetGame(){
+    score = 0;
+    document.getElementById("currentScore").innerHTML = "Score: " + score;
+
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
 }
