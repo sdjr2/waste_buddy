@@ -16,8 +16,8 @@ function randomItem() {
     // Displays image
     document.getElementById(items[chosenItem]).style.display = "block";
 
-// Displays name
-document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
+    // Displays name
+    document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
     // Displays name
     document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
 
@@ -94,6 +94,8 @@ function resetGame(){
 
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
+}
+
 function death() {
     if (life==0){
         alert("GAME OVER!");
