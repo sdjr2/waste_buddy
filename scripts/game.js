@@ -26,12 +26,17 @@ function randomItem() {
     document.getElementById("mixed paper").onclick = checkMixedPaper;
 }
 
+
 function checkRecyclables() {
     if (chosenItem == 1 || chosenItem == 2) {
         console.log("WIN");
         score++;
     } else {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
+        guess--;
+        decreaseScore();
+        guessesLeft();
+
         score--;
         life--;
         death();
@@ -48,6 +53,9 @@ function checkCompost() {
         score++;
     } else {
         console.log("GO HOME BRO");
+        guess--;
+        guessesLeft();
+        decreaseScore();
         score--;
         life--;
         death();
@@ -64,6 +72,9 @@ function checkRefundables() {
         score++;
     } else {
         console.log("GO HOME BRO");
+        guess--;
+        guessesLeft();
+        decreaseScore();
         score--;
         life--;
         death();
@@ -80,6 +91,9 @@ function checkMixedPaper() {
         score++;
     } else {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
+        guess--;
+        guessesLeft();
+        decreaseScore();
         score--;
         life--;
         death();
@@ -98,3 +112,23 @@ function death() {
 
 randomItem();
 
+
+
+function endGame(){
+    alert("You decided to quit! Click on the leaderboard to see the scoreboard!!");
+    db.collection("users").add({
+        score: score
+    })
+        .then(function (docRef) {
+            console.log("The id: " + docRef.id);
+        })
+        .catch(function (error) {
+            console.error("Error adding the document", error);
+        });
+console.log(name, score);
+alert("Your score is: " + score);
+return;
+}
+
+document.getElementById("finishBtn").onclick =endGame;
+document.getElementById("restartBtn").onclick = resetGame;
