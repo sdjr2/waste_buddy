@@ -36,6 +36,7 @@ function checkRecyclables() {
         life--;
         death();
     }
+    document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
 }
@@ -50,6 +51,7 @@ function checkCompost() {
         life--;
         death();
     }
+    document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
 }
@@ -64,6 +66,7 @@ function checkRefundables() {
         life--;
         death();
     }
+    document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
 }
@@ -78,6 +81,7 @@ function checkMixedPaper() {
         life--;
         death();
     }
+    document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
 }
