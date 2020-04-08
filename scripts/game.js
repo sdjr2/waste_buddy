@@ -1,6 +1,6 @@
 // Array of items
-let items = ["itemImage1", "itemImage2", "itemImage3", "itemImage4", "itemImage5", "itemImage6", "itemImage7", "itemImage8", "itemImage9", "itemImage10", "itemImage11"];
-let itemName = ["Item: null", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
+let items = ["itemImage2", "itemImage2", "itemImage3", "itemImage4", "itemImage5", "itemImage6", "itemImage7", "itemImage8", "itemImage9", "itemImage10", "itemImage11"];
+let itemName = ["Item: coffee cup", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
 
 let score = 0;
 let life = 3;
@@ -28,7 +28,7 @@ function randomItem() {
 
 
 function checkRecyclables() {
-    if (chosenItem == 1 || chosenItem == 2) {
+    if (chosenItem == 0 || chosenItem == 1 || chosenItem == 2) {
         console.log("WIN");
         score++;
     } else {
