@@ -146,26 +146,32 @@
 #helpBtn{
     width: 1cm;
     height: 1cm;
-    margin-left: 8vh;
+    margin-left: 60px;
 }
 
 #leaderboardBtn{
     width: 1cm;
     height: 1cm;
-    margin-left: 8vh;
+    margin-left: 60px;
 }
 
 .circle{
     border: solid 3px grey;
     border-radius: 50%;
     text-align: center;
-    margin-left: 8vh;
+    margin-left: 60px;
 }
 
 #restartBtn{
     width: 1cm;
     height: 1cm;
-    margin-left: 8vh;
+    margin-left: 60px;
+}
+
+#finishBtn{
+    width: 1cm;
+    height: 1cm;
+    margin-left: 60px;
 }
 
 .scoreBox{

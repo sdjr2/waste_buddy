@@ -14,6 +14,7 @@ document.getElementById(items[chosenItem]).style.display = "block";
 
 // Displays name
 document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
+<<<<<<< HEAD
 
 // Clicking and check if item is correct
 document.getElementById("recyclables").onclick = checkRecyclables;
@@ -56,3 +57,5 @@ function checkMixedPaper() {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
     }
 }
+=======
+>>>>>>> de8843b6129de5415c4ae407afd99d7485be4f89
