@@ -22,7 +22,7 @@
   <div id="bigBox">
     <div id="boxTitle">
       <div id="previousScore">
-        <b>High Score:0</b>
+        <b>Your Score:0</b>
       </div>
       <div id="boxTitle">
         Sorting Game
@@ -92,12 +92,8 @@
       db.collection("users").onSnapshot(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
           welcome.innerHTML = "Welcome, " + doc.data().name
+         
           
-          if(doc.data().score ==undefined){
-            prev_Score.innerHTML = "Good Luck, Your first time!"
-          }else{
-          prev_Score.innerHTML = "<b>Your Score: </b>" + doc.data().score
-          }
         });
       });
       
