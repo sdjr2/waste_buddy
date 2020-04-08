@@ -1,3 +1,6 @@
+.navbar {
+    background-color: darkblue;
+}
 body{
     background-image: url("../images/background2.jpg");
     background-repeat: no-repeat;
@@ -95,3 +98,4 @@ body{
     left: 170px;
     font-size: 20px;
 }
+

@@ -10,6 +10,7 @@
     left: 10px;
 }
 
+<<<<<<< HEAD
 #itemImage {
     height: 15%;
     position: absolute;
@@ -96,6 +97,13 @@
     top: 20%;
     left: 48%;
     display: none;
+=======
+#itemDiv{
+    margin: 0 auto;
+    width: 50%;
+    height: 200px;
+    text-align: center;
+>>>>>>> 42a38349b44ceebb7fdb9f958928f0a30e332818
 }
 
 #itemImage11 {
@@ -120,18 +128,16 @@
 #individualBinDiv{
     display: inline-block;
     margin-left: 50px;
-    font-size: 1vh;
+    font-size: 16px;
 }
 
 #scoreBoardWrapper{
-    border: solid 5px violet;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
 #scoreBoardNav {
-    border: solid 5px red;
     height: 10vh;
     color: white;
 }
@@ -140,27 +146,29 @@
     display: flex;
 }
 
-#leaderboardDiv{
-    border: solid 5px red;
-    margin: 8vh;
+#helpBtn{
+    width: 1cm;
+    height: 1cm;
+    margin-left: 8vh;
 }
 
-#howtoDiv{
-    width: 5%;
-    height: 50%
+#leaderboardBtn{
+    width: 1cm;
+    height: 1cm;
+    margin-left: 8vh;
 }
 
 .circle{
-    border: solid 1px grey;
-    width: 100%;
+    border: solid 3px grey;
     border-radius: 50%;
     text-align: center;
     margin-left: 8vh;
 }
 
-#sortingGameStart {
-    font-size: 2vh;
-    font-size: 2vw;
+#restartBtn{
+    width: 1cm;
+    height: 1cm;
+    margin-left: 8vh;
 }
 
 .scoreBox{
@@ -176,3 +184,4 @@
     width: 8vh;
     height: 12vh;
 }
+

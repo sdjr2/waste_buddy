@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style/leaderboard.css">
+</head>
+<body>
+  
+    <button type="button" id="backbutton"><a id="back" href="game.html">Back to Game!</a></button>
+<h1>Leaderboard</h1>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<script src="scripts//firebase_api_wasteBuddy.js"> </script>
+    
+    <script>
+    //holds all player objects in the leaderboard
+        let leaderboard = [];
+
+        //used with the sort method for leaderboard to place high scores first
+        function compare(a, b) {
+            const scoreA = a.score;
+            const scoreB = b.score;
+
+            return scoreB - scoreA;
+        }
+
+        //retrieves the leaderboard scores and sorts them
+        function displayleaderboard() {
+            var table = document.createElement("table");
+            table.id="leaderboard";
+        
+            db.collection("users").get().then(function (snap) {
+                snap.forEach(function (doc) {
+                    leaderboard.push(doc.data());
+                    
+                });
+            }).then(function () {
+                leaderboard.sort(compare);
+                for (let i = 0; i < 10 ; i++) {
+                    
+                    var tr = document.createElement('tr');
+                    tr.id="row1";
+                   
+                   var td3 = document.createElement('td');
+                   td3.id="cell3";
+                   var td1 = document.createElement('td');
+                   td1.id="cell1";
+                   
+
+                   var td2 = document.createElement('td');
+                   td2.id="cell2";
+                 
+                  var text3=document.createTextNode(i+1);
+                  var text1 = document.createTextNode(leaderboard[i].name);
+                  var text2 = document.createTextNode(leaderboard[i].score);
+                 
+                  td3.appendChild(text3);
+                  td1.appendChild(text1);
+                  td2.appendChild(text2);
+                
+                  tr.appendChild(td3);
+                  tr.appendChild(td1);
+                  tr.appendChild(td2);
+                  table.appendChild(tr);
+                }               
+            })
+            document.body.appendChild(table);
+        }
+        displayleaderboard();
+    </script>
+</body>
+</html>

@@ -1,11 +1,15 @@
 #title{
     padding: 5%;
-    font-size: 60px;
+    font-size: 5vw;
     text-align: center;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: grey;
+   
 }
 #background{
     background-image: url("../images/background.jpg");
-    background-size: cover;
+   
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
 }
