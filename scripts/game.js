@@ -3,14 +3,24 @@
 let items = ["itemImage1", "itemImage2", "itemImage3", "itemImage4", "itemImage5", "itemImage6", "itemImage7", "itemImage8", "itemImage9", "itemImage10", "itemImage11"];
 let itemName = ["Item: null", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
 
-// Randomizes words
-let chosenItem = Math.floor(Math.random() * items.length);
+// Sets a random item to display
+function displayRandomItem(){
+    let chosenItem = Math.floor(Math.random() * items.length);
+    // Displays image
+    document.getElementById(items[chosenItem]).style.display = "block"; 
+    // Displays name
+    document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
+}
 
-console.log(items[chosenItem]);
-console.log(itemName[chosenItem]);
 
-// Displays image
-document.getElementById(items[chosenItem]).style.display = "block";
 
-// Displays name
-document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
+
+
+
+function resetGame(){
+    score = 0;
+
+    document.getElementById("currentScore").innerHTML = "Current Score: " + score;
+}
+
+document.getElementById("finishBtn").onclick = resetGame;
