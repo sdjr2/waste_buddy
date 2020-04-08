@@ -26,6 +26,17 @@ function randomItem() {
     document.getElementById("mixed paper").onclick = checkMixedPaper;
 }
 
+// opening menu on load
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+// starts game when opening menu is turned off
+function off() {
+    document.getElementById("overlay").style.display = "none";
+    //song.play();
+    randomItem();
+}
 
 function checkRecyclables() {
     if (chosenItem == 1 || chosenItem == 2) {
@@ -123,8 +134,6 @@ function death() {
         return;
     }
 }
-
-randomItem();
 
 
 

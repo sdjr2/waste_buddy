@@ -4,6 +4,46 @@
     margin: 0 auto;
 }
 
+/* styling for overlay or game start menu */
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* styling of start game text */
+#text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 10vh;
+    font-size: 10vw;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  
+  /* styling of aurthor text */
+  #text2 {
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    font-size: 2vh;
+    font-size: 2vw;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 
 #itemName {
     position: absolute;
@@ -15,7 +55,7 @@
     right: 15px;
 }
 
-#itemDiv{
+#itemDiv {
     margin: 0 auto;
     width: 50%;
     height: 200px;
@@ -101,6 +141,7 @@
     left: 48%;
     display: none;
 }
+
 #itemImage10 {
     height: 15%;
     position: absolute;
@@ -108,6 +149,7 @@
     left: 48%;
     display: none;
 }
+
 #itemImage11 {
     height: 15%;
     position: absolute;
@@ -117,7 +159,7 @@
 }
 
 
-#binWrapper{
+#binWrapper {
     position: absolute;
     bottom: 20%;
     width: 100%;
@@ -127,16 +169,17 @@
     text-align: center;
 }
 
-#individualBinDiv{
+#individualBinDiv {
     display: inline-block;
     margin-left: 50px;
     font-size: 16px;
 }
-#individualBinDiv:hover{
-   opacity: 0.1;
+
+#individualBinDiv:hover {
+    opacity: 0.1;
 }
 
-#scoreBoardWrapper{
+#scoreBoardWrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -147,51 +190,51 @@
     color: white;
 }
 
-#scoreDiv{
+#scoreDiv {
     display: flex;
 }
 
-#helpBtn{
+#helpBtn {
     width: 1cm;
     height: 1cm;
     margin-left: 60px;
 }
 
-#leaderboardBtn{
+#leaderboardBtn {
     width: 1cm;
     height: 1cm;
     margin-left: 60px;
 }
 
-.circle{
+.circle {
     border: solid 3px grey;
     border-radius: 50%;
     text-align: center;
     margin-left: 60px;
 }
 
-#restartBtn{
+#restartBtn {
     width: 1cm;
     height: 1cm;
     margin-left: 60px;
 }
 
-#finishBtn{
+#finishBtn {
     width: 1cm;
     height: 1cm;
     margin-left: 60px;
 }
 
-.scoreBox{
+.scoreBox {
     border: solid 1px grey;
 }
 
-.bottomClass{
+.bottomClass {
     border: solid 1px blue;
     display: inline-block;
 }
 
-.bins{
+.bins {
     width: 8vh;
     height: 12vh;
 }
@@ -205,10 +248,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
+}
+
+/* The actual popup */
+.popup .popuptext {
     visibility: hidden;
     width: 160px;
     background-color: #555;
@@ -221,10 +264,10 @@
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -233,22 +276,32 @@
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
