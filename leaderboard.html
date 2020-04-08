@@ -9,6 +9,8 @@
   
     <button type="button" id="backbutton"><a id="back" href="game.html">Back to Game!</a></button>
 <h1>Leaderboard</h1>
+<p  id="list_div">   
+</p>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
@@ -16,7 +18,20 @@
 <script src="scripts//firebase_api_wasteBuddy.js"> </script>
     
     <script>
-    
+       const list_div = document.getElementById("list_div");
+        db.collection("users").orderBy('score', 'desc').limit(10).onSnapshot(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+
+
+                list_div.innerHTML += "<table>" + "<tr>" + "<td>" + doc.data().username + ": " + "</td>" +
+                    "<td>" + doc.data().score + "</td>" + "</tr>" + "</table>"
+
+
+            });
+        });
+
+
+    /**
     //holds all player objects in the leaderboard
         let leaderboard = [];
 
@@ -71,7 +86,7 @@
             document.body.appendChild(table);
         }
         displayleaderboard();
-    
+    */
            
     </script>
 </body>
