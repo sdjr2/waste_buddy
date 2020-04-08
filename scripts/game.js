@@ -14,5 +14,3 @@ document.getElementById(items[chosenItem]).style.display = "block";
 
 // Displays name
 document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
-
-
