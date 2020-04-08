@@ -148,3 +148,8 @@ function resetGame(){
 
 document.getElementById("finishBtn").onclick = endGame;
 document.getElementById("restartBtn").onclick = resetGame;
+
+function infoBox() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
