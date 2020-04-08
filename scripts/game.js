@@ -140,7 +140,7 @@ function endGame() {
 
 function resetGame(){
     score = 0;
-    document.getElementById("currentScore").innerHTML = "Score: " + score;
+    document.getElementById("currentScore").innerHTML = "Score: ";
 
     document.getElementById(items[chosenItem]).style.display = "none";
     randomItem();
