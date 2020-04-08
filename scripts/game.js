@@ -130,6 +130,7 @@ function death() {
             });
         console.log(name, score);
         alert("Your score is: " + score);
+        location.reload();
         return;
     }
 }
