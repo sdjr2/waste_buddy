@@ -15,4 +15,44 @@ document.getElementById(items[chosenItem]).style.display = "block";
 // Displays name
 document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
 
+// Clicking and check if item is correct
+document.getElementById("recyclables").onclick = checkRecyclables;
+document.getElementById("compost").onclick = checkCompost;
+document.getElementById("refundables").onclick = checkRefundables;
+document.getElementById("mixed paper").onclick = checkMixedPaper;
 
+function checkRecyclables() {
+    if(chosenItem == 2 || chosenItem == 3){
+        console.log("WIN");
+    }
+    else{
+        console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
+    }
+}
+
+function checkCompost() {
+    if(chosenItem == 4 || chosenItem == 5 || chosenItem == 6){
+        console.log("DEVU IS PROUD");
+    }
+    else{
+        console.log("GO HOME BRO");
+    }
+}
+
+function checkRefundables() {
+    if(chosenItem == 7 || chosenItem == 8 || chosenItem == 9){
+        console.log("DEVU IS PROUD");
+    }
+    else{
+        console.log("GO HOME BRO");
+    }
+}
+
+function checkMixedPaper() {
+    if(chosenItem == 10 || chosenItem == 11){
+        console.log("WIN");
+    }
+    else{
+        console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
+    }
+}
