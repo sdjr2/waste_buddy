@@ -135,7 +135,7 @@ function death() {
             return;
         }
         console.log(name, score);
-        alert("Your score is: " + score);
+        alert(userInput + " your score is: " + score);
         location.reload();
         return;
     }
@@ -162,7 +162,7 @@ function endGame() {
         return;
     }
     console.log(name, score);
-    alert("Your score is: " + score);
+    alert(userInput + " your score is: " + score);
     return;
 }
 
