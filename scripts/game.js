@@ -2,8 +2,13 @@
 let items = ["itemImage1", "itemImage2", "itemImage3", "itemImage4", "itemImage5", "itemImage6", "itemImage7", "itemImage8", "itemImage9", "itemImage10", "itemImage11"];
 let itemName = ["Item: garlic", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
 
+// Game status
 let score = 0;
 let life = 3;
+
+// Sets music up
+let song = new Audio();
+song.src = "src/song.mp3";
 
 // Randomizes words
 let chosenItem = Math.floor(Math.random() * items.length);
@@ -26,6 +31,17 @@ function randomItem() {
     document.getElementById("mixed paper").onclick = checkMixedPaper;
 }
 
+// opening menu on load
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+// starts game when opening menu is turned off
+function off() {
+    document.getElementById("overlay").style.display = "none";
+    song.play();
+    randomItem();
+}
 
 function checkRecyclables() {
     if (chosenItem == 1 || chosenItem == 2) {
@@ -117,8 +133,6 @@ function death() {
         return;
     }
 }
-
-randomItem();
 
 
 
