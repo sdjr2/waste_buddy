@@ -34,6 +34,7 @@ function checkRecyclables() {
         score++;
     } else {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
+        window.alert("Not quite, try again!");
         score--;
         life--;
         death();
@@ -51,6 +52,7 @@ function checkCompost() {
         score++;
     } else {
         console.log("GO HOME BRO");
+        window.alert("Not quite, try again!");
         score--;
         life--;
         death();
@@ -68,6 +70,7 @@ function checkRefundables() {
         score++;
     } else {
         console.log("GO HOME BRO");
+        window.alert("Not quite, try again!");
         score--;
         life--;
         death();
@@ -85,6 +88,7 @@ function checkMixedPaper() {
         score++;
     } else {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
+        window.alert("Not quite, try again!");
         score--;
         life--;
         death();
@@ -96,8 +100,7 @@ function checkMixedPaper() {
 }
 
 function death() {
-    document.getElementById("lifeText").innerHTML = "Lives: " + life;
-    if (life==0){
+    if (life == 0) {
         alert("GAME OVER! No more Lives left. Click on the leaderboard to see the scoreboard.");
         //databse
         db.collection("users").add({
@@ -109,18 +112,17 @@ function death() {
             .catch(function (error) {
                 console.error("Error adding the document", error);
             });
-    console.log(name, score);
-    alert("Your score is: " + score);
-    return;
+        console.log(name, score);
+        alert("Your score is: " + score);
+        return;
     }
-    }
-
+}
 
 randomItem();
 
 
 
-function endGame(){
+function endGame() {
     alert("You decided to quit! Click on the leaderboard to see the scoreboard!!");
     db.collection("users").add({
         score: score
@@ -131,10 +133,10 @@ function endGame(){
         .catch(function (error) {
             console.error("Error adding the document", error);
         });
-console.log(name, score);
-alert("Your score is: " + score);
-return;
+    console.log(name, score);
+    alert("Your score is: " + score);
+    return;
 }
 
-document.getElementById("finishBtn").onclick =endGame;
+document.getElementById("finishBtn").onclick = endGame;
 document.getElementById("restartBtn").onclick = resetGame;
