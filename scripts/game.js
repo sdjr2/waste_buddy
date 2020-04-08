@@ -35,10 +35,6 @@ function checkRecyclables() {
         score++;
     } else {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
-        guess--;
-        decreaseScore();
-        guessesLeft();
-
         score--;
         life--;
         death();
@@ -55,9 +51,6 @@ function checkCompost() {
         score++;
     } else {
         console.log("GO HOME BRO");
-        guess--;
-        guessesLeft();
-        decreaseScore();
         score--;
         life--;
         death();
@@ -74,9 +67,6 @@ function checkRefundables() {
         score++;
     } else {
         console.log("GO HOME BRO");
-        guess--;
-        guessesLeft();
-        decreaseScore();
         score--;
         life--;
         death();
@@ -93,9 +83,6 @@ function checkMixedPaper() {
         score++;
     } else {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
-        guess--;
-        guessesLeft();
-        decreaseScore();
         score--;
         life--;
         death();
@@ -115,9 +102,12 @@ function resetGame(){
 }
 
 function death() {
+    document.getElementById("lifeText").innerHTML = "Lives: " + life;
     if (life==0){
         alert("GAME OVER!");
     }
+    life = 3;
+    score = 0;
 }
 
 randomItem();
