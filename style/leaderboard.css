@@ -1,0 +1,62 @@
+
+   
+
+
+
+h1 {
+    color: black;
+    font-size: 4vw;
+    text-align: center;
+    text-decoration: lightgrey;
+    border: 0.5vh solid black;
+ 
+}
+
+body {
+    background-image: url("../images/leaderboardB.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#leaderboard {
+   margin: auto;
+
+    border-style: double;
+    border-color: navy;
+    width: 10vw;
+}
+
+#back {
+      width: 2vh;
+    height: 7vh;
+    text-decoration: none;
+    text-emphasis-color: black;
+    position: relative;
+    cursor: pointer;
+}
+
+
+#backbutton{
+    position: absolute;
+    top: 12%;
+    right:1%;
+
+}
+
+#row1 {
+
+    width:100px;
+    background-color: lightblue;
+}
+
+#cell1,
+#cell2,
+#cell3 {
+    width:100vw;
+    height: 5vh;
+    font-size: 3vh;
+    text-align: center;
+    border: 0.2vh solid black;
+    padding:2vw;
+}

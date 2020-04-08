@@ -1,0 +1,5 @@
+//score functions
+function increaseScore(){
+    
+  
+}
