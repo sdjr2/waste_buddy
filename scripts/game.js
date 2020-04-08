@@ -138,5 +138,13 @@ function endGame() {
     return;
 }
 
+function resetGame(){
+    score = 0;
+    document.getElementById("currentScore").innerHTML = "Score: " + score;
+
+    document.getElementById(items[chosenItem]).style.display = "none";
+    randomItem();
+}
+
 document.getElementById("finishBtn").onclick = endGame;
 document.getElementById("restartBtn").onclick = resetGame;
