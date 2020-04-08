@@ -32,9 +32,11 @@ function randomItem() {
 function checkRecyclables() {
     if (chosenItem == 0 || chosenItem == 1 || chosenItem == 2) {
         console.log("WIN");
+        window.alert("Correct, well done!");
         score++;
     } else {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
+        window.alert("Not quite :(");
         guess--;
         decreaseScore();
         guessesLeft();
@@ -52,9 +54,11 @@ function checkRecyclables() {
 function checkCompost() {
     if (chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
         console.log("DEVU IS PROUD");
+        window.alert("Correct, well done!");
         score++;
     } else {
         console.log("GO HOME BRO");
+        window.alert("Not quite :(");
         guess--;
         guessesLeft();
         decreaseScore();
@@ -71,9 +75,11 @@ function checkCompost() {
 function checkRefundables() {
     if (chosenItem == 6 || chosenItem == 7 || chosenItem == 8) {
         console.log("DEVU IS PROUD");
+        window.alert("Correct, well done!");
         score++;
     } else {
         console.log("GO HOME BRO");
+        window.alert("Not quite :(");
         guess--;
         guessesLeft();
         decreaseScore();
@@ -90,9 +96,11 @@ function checkRefundables() {
 function checkMixedPaper() {
     if (chosenItem == 9 || chosenItem == 10) {
         console.log("WIN");
+        window.alert("Correct, well done!");
         score++;
     } else {
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
+        window.alert("Not quite :(");
         guess--;
         guessesLeft();
         decreaseScore();
