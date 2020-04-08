@@ -1,6 +1,6 @@
 // Array of items
 let items = ["itemImage1", "itemImage2", "itemImage3", "itemImage4", "itemImage5", "itemImage6", "itemImage7", "itemImage8", "itemImage9", "itemImage10", "itemImage11"];
-let itemName = ["Item: garlic", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
+let itemName = ["Item: Garlic", "Item: Coffee cup", "Item: Milk container", "Item: Fish", "Item: Fruits", "Item: Paper Plate", "Item: Juice box", "Item: Pop Can", "Item: Water Bottle", "Item: Newsprint", "Item: Books"];
 
 // Game status
 let score = 0;
@@ -117,11 +117,9 @@ function checkMixedPaper() {
 
 function death() {
     if (life == 0) {
-        let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
+        alert("GAME OVER! No more Lives left. Click on the leaderboard to see the scoreboard.");
         //databse
-        if(userInput!=""){
         db.collection("users").add({
-            username: userInput,
             score: score
         })
             .then(function (docRef) {
@@ -130,12 +128,9 @@ function death() {
             .catch(function (error) {
                 console.error("Error adding the document", error);
             });
-        } else{
-            alert("please enter a name!")
-            return;
-        }
         console.log(name, score);
         alert("Your score is: " + score);
+        location.reload();
         return;
     }
 }
@@ -143,11 +138,8 @@ function death() {
 
 
 function endGame() {
-    let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
-    //databse
-    if(userInput!=""){
+    alert("You decided to quit! Click on the leaderboard to see the scoreboard!!");
     db.collection("users").add({
-        username: userInput,
         score: score
     })
         .then(function (docRef) {
@@ -156,15 +148,10 @@ function endGame() {
         .catch(function (error) {
             console.error("Error adding the document", error);
         });
-    } else{
-        alert("please enter a name!")
-        return;
-    }
     console.log(name, score);
     alert("Your score is: " + score);
     return;
 }
-
 
 function resetGame(){
     score = 0;
@@ -176,8 +163,3 @@ function resetGame(){
 
 document.getElementById("finishBtn").onclick = endGame;
 document.getElementById("restartBtn").onclick = resetGame;
-
-function infoBox() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-  }
