@@ -134,7 +134,7 @@ function death() {
             alert("Please enter your name!");
             return;
         }
-        console.log(name, score);
+        console.log(username, score);
         alert(userInput + " your score is: " + score);
         location.reload();
         return;
@@ -161,7 +161,7 @@ function endGame() {
         alert("Please enter your name!");
         return;
     }
-    console.log(name, score);
+    console.log(username, score);
     alert(userInput + " your score is: " + score);
     return;
 }
