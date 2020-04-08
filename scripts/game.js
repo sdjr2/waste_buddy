@@ -12,7 +12,10 @@ console.log(itemName[chosenItem]);
 // Displays image
 document.getElementById(items[chosenItem]).style.display = "block";
 
+
 // Displays name
-document.getElementById("itemName").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
+document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
 
+function displayImage(){
 
+}

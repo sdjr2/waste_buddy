@@ -1,4 +1,4 @@
-var firebaseConfig = {
+  var firebaseConfig = {
     apiKey: "AIzaSyCxVIaMGqHY6U-5cdZy64DoYhHHIDXXusc",
     authDomain: "wastebuddy-10c2d.firebaseapp.com",
     databaseURL: "https://wastebuddy-10c2d.firebaseio.com",
