@@ -1,6 +1,6 @@
 // Array of items
 let items = ["itemImage1", "itemImage2", "itemImage3", "itemImage4", "itemImage5", "itemImage6", "itemImage7", "itemImage8", "itemImage9", "itemImage10", "itemImage11"];
-let itemName = ["Item: null", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
+let itemName = ["Item: garlic", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
 
 let score = 0;
 let life = 3;
@@ -26,6 +26,17 @@ function randomItem() {
     document.getElementById("mixed paper").onclick = checkMixedPaper;
 }
 
+// opening menu on load
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+// starts game when opening menu is turned off
+function off() {
+    document.getElementById("overlay").style.display = "none";
+    //song.play();
+    randomItem();
+}
 
 function checkRecyclables() {
     if (chosenItem == 1 || chosenItem == 2) {
@@ -46,7 +57,7 @@ function checkRecyclables() {
 }
 
 function checkCompost() {
-    if (chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
+    if (chosenItem == 0 ||chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
         console.log("DEVU IS PROUD");
         window.alert("Correct, well done!");
         score++;
@@ -123,8 +134,6 @@ function death() {
         return;
     }
 }
-
-randomItem();
 
 
 
