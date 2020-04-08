@@ -14,7 +14,6 @@ document.getElementById(items[chosenItem]).style.display = "block";
 
 // Displays name
 document.getElementById("itemNameText").innerHTML = "<b> " + itemName[chosenItem] + "</b>";
-<<<<<<< HEAD
 
 // Clicking and check if item is correct
 document.getElementById("recyclables").onclick = checkRecyclables;
@@ -23,7 +22,7 @@ document.getElementById("refundables").onclick = checkRefundables;
 document.getElementById("mixed paper").onclick = checkMixedPaper;
 
 function checkRecyclables() {
-    if(chosenItem == 2 || chosenItem == 3){
+    if(chosenItem == 1 || chosenItem == 2){
         console.log("WIN");
     }
     else{
@@ -32,7 +31,7 @@ function checkRecyclables() {
 }
 
 function checkCompost() {
-    if(chosenItem == 4 || chosenItem == 5 || chosenItem == 6){
+    if(chosenItem == 3 || chosenItem == 4 || chosenItem == 5){
         console.log("DEVU IS PROUD");
     }
     else{
@@ -41,7 +40,7 @@ function checkCompost() {
 }
 
 function checkRefundables() {
-    if(chosenItem == 7 || chosenItem == 8 || chosenItem == 9){
+    if(chosenItem == 6 || chosenItem == 7 || chosenItem == 8){
         console.log("DEVU IS PROUD");
     }
     else{
@@ -50,12 +49,10 @@ function checkRefundables() {
 }
 
 function checkMixedPaper() {
-    if(chosenItem == 10 || chosenItem == 11){
+    if(chosenItem == 9 || chosenItem == 10){
         console.log("WIN");
     }
     else{
         console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
     }
 }
-=======
->>>>>>> de8843b6129de5415c4ae407afd99d7485be4f89
