@@ -101,9 +101,11 @@ function checkMixedPaper() {
 
 function death() {
     if (life == 0) {
-        alert("GAME OVER! No more Lives left. Click on the leaderboard to see the scoreboard.");
+        let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
         //databse
+        if(userInput!=""){
         db.collection("users").add({
+            username: userInput,
             score: score
         })
             .then(function (docRef) {
@@ -112,6 +114,10 @@ function death() {
             .catch(function (error) {
                 console.error("Error adding the document", error);
             });
+        } else{
+            alert("please enter a name!")
+            return;
+        }
         console.log(name, score);
         alert("Your score is: " + score);
         return;
@@ -123,8 +129,11 @@ randomItem();
 
 
 function endGame() {
-    alert("You decided to quit! Click on the leaderboard to see the scoreboard!!");
+    let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
+    //databse
+    if(userInput!=""){
     db.collection("users").add({
+        username: userInput,
         score: score
     })
         .then(function (docRef) {
@@ -133,10 +142,15 @@ function endGame() {
         .catch(function (error) {
             console.error("Error adding the document", error);
         });
+    } else{
+        alert("please enter a name!")
+        return;
+    }
     console.log(name, score);
     alert("Your score is: " + score);
     return;
 }
+
 
 function resetGame(){
     score = 0;

@@ -93,7 +93,7 @@
         querySnapshot.forEach(function (doc) {
           welcome.innerHTML = "Welcome, " + doc.data().name
           
-          if(doc.data().score== undefined){
+          if(doc.data().score ==undefined){
             prev_Score.innerHTML = "Good Luck, Your first time!"
           }else{
           prev_Score.innerHTML = "<b>Your Score: </b>" + doc.data().score
