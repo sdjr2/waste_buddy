@@ -1,11 +1,12 @@
-.navbar {
-    background-color: darkblue;
-}
 body{
     background-image: url("../images/background2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+#activeLink:hover{
+    text-decoration: underline;
 }
 
 #pageTitle {
@@ -15,8 +16,8 @@ body{
 }
 
 #bigBox {
-    border: black;
-    border-style: solid;
+    border: solid 2px black;
+    border-radius: 20px;
     margin: 0 auto;
     margin-top: 50px;
     width: 80%;
@@ -24,8 +25,8 @@ body{
 }
 
 #smallBox {
-    border: black;
-    border-style: solid;
+    border: solid 2px black;
+    border-radius: 20px;
     margin: 0 auto;
     margin-top: 50px;
     width: 80%;
@@ -45,12 +46,21 @@ body{
 }
 
 #sortingGameStart {
-    font-size: 25px;
-    border: black;
-    border-style: solid;
-    text-align: center;
+    border: solid 3px black;
+    border-radius: 10px;
     width: 150px;
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
     margin: 0 auto;
+    line-height: 80px;
+}
+
+#sortingGameStart:hover{
+    border-width: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
 }
 
 #binBox {
@@ -73,6 +83,9 @@ body{
 }
 
 #searchImage {
+    position: relative;
+    top:10%;
+    left:8%;
     max-width: 50%;
     display: inline-block;
 }
@@ -87,7 +100,7 @@ body{
 }
 
 #welcomeMessage {
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     position: absolute;
     bottom: 0%;
