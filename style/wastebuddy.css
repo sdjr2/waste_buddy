@@ -5,10 +5,8 @@ body {
     background-attachment: fixed;
 }
 
-#pageTitle {
-    padding-top: 40px;
-    color: white;
-    margin: 0 auto;
+#activeLink:hover{
+    text-decoration: underline;
 }
 
 #login {
@@ -16,11 +14,16 @@ body {
     position: absolute;
     right: 1%;
     bottom: 5%;
+    text-decoration: underline;
+}
+
+#login:hover{
+    font-weight: bold;
 }
 
 #bigBox {
-    border: black;
-    border-style: solid;
+    border: solid 2px black;
+    border-radius: 20px;
     margin: 0 auto;
     margin-top: 50px;
     width: 80%;
@@ -28,8 +31,8 @@ body {
 }
 
 #smallBox {
-    border: black;
-    border-style: solid;
+    border: solid 2px black;
+    border-radius: 20px;
     margin: 0 auto;
     margin-top: 50px;
     width: 80%;
@@ -43,11 +46,21 @@ body {
 }
 
 #sortingGameStart {
-    border: black;
-    border-style: solid;
-    text-align: center;
+    border: solid 3px black;
+    border-radius: 10px;
     width: 150px;
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
     margin: 0 auto;
+    line-height: 80px;
+}
+
+#sortingGameStart:hover{
+    border-width: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
 }
 
 #binBox {
