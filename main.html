@@ -93,6 +93,12 @@
 <script src="scripts//firebase_api_wasteBuddy.js"> </script>
     <script>
 
+
+      /**
+       * Using the onSnapshot, we can retrieve the real time change that occurs in the data.
+       * to display the welcome we are retreiving the information using a firebase authorisation method that holds the
+       * information of the current logged in user.
+       * */
       const welcome = document.getElementById("welcomeMessage");
       const prev_Score = document.getElementById("previousScore");
       db.collection("users").onSnapshot(function (querySnapshot) {

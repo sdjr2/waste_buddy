@@ -18,7 +18,10 @@ let playing = true;
 let wrong = new Audio();
 wrong.src = "src/wrong.mp3";
 
-// Controls music
+// Randomizes item
+let chosenItem = Math.floor(Math.random() * items.length);
+
+/** Controls music */
 function controlAudio() {
     if (playing == true) {
         document.getElementById("soundIcon").src = "./images/sound.png";
@@ -34,9 +37,7 @@ function controlAudio() {
     }
 }
 
-// Randomizes words
-let chosenItem = Math.floor(Math.random() * items.length);
-
+/** Rerandomizes the item */
 function randomItem() {
     chosenItem = Math.floor(Math.random() * items.length);
     console.log(items[chosenItem]);
@@ -55,40 +56,40 @@ function randomItem() {
     document.getElementById("mixed paper").onclick = checkMixedPaper;
 }
 
-// opening menu on load
+/** opening menu on load */
 function on() {
     document.getElementById("overlay").style.display = "block";
 }
 
-// starts game when opening menu is turned off
+/** starts game when opening menu is turned off */
 function off() {
     document.getElementById("overlay").style.display = "none";
     song.play();
     randomItem();
 }
 
-// Overlay answer
+/** Overlay answer */
 function onCheck() {
     wrong.play();
     document.getElementById("overlayCheck").style.display = "block";
 }
 
-// Continues game on click
+/**  Continues game on click */
 function offCheck() {
     document.getElementById("overlayCheck").style.display = "none";
     randomItem();
 }
 
-// Overlay prompting user to restart game
+/** Overlay prompting user to restart game */
 function onRestart() {
     document.getElementById("overlayRestart").style.display = "block";
 }
 
-// Restarts the game
+/** Restarts the game */ 
 function offRestart() {
     location.reload();
 }
-
+/** Checks if item is belongs to reyclable category */
 function checkRecyclables() {
     if (chosenItem == 1 || chosenItem == 2) {
         document.getElementById("answerText").innerHTML = "Correct, well done!";
@@ -98,7 +99,7 @@ function checkRecyclables() {
         document.getElementById(items[chosenItem]).style.display = "none";
         onCheck();
     } else {
-        document.getElementById("answerText").innerHTML = "DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???";
+        document.getElementById("answerText").innerHTML = "Incorrect, Try again!";
         score--;
         life--;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -109,16 +110,17 @@ function checkRecyclables() {
     }
 }
 
+/** Checks if item is belongs to compost category */
 function checkCompost() {
     if (chosenItem == 0 || chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
-        document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
+        document.getElementById("answerText").innerHTML = "Correct, well done!";
         score++;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
         document.getElementById("currentScore").innerHTML = "Score: " + score;
         document.getElementById(items[chosenItem]).style.display = "none";
         onCheck();
     } else {
-        document.getElementById("answerText").innerHTML = "GO HOME BRO";
+        document.getElementById("answerText").innerHTML = "Incorrect, Try again!";
         score--;
         life--;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -128,17 +130,17 @@ function checkCompost() {
         death();
     }
 }
-
+/** Checks if item is belongs to refundable category */
 function checkRefundables() {
     if (chosenItem == 6 || chosenItem == 7 || chosenItem == 8) {
-        document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
+        document.getElementById("answerText").innerHTML = "Correct, well done!";
         score++;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
         document.getElementById("currentScore").innerHTML = "Score: " + score;
         document.getElementById(items[chosenItem]).style.display = "none";
         onCheck();
     } else {
-        document.getElementById("answerText").innerHTML = "GO HOME BRO";
+        document.getElementById("answerText").innerHTML = "Incorrect, try again!";
         score--;
         life--;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -148,7 +150,7 @@ function checkRefundables() {
         death();
     }
 }
-
+/** Checks if item is belongs to mixed paper category */
 function checkMixedPaper() {
     if (chosenItem == 9 || chosenItem == 10) {
         document.getElementById("answerText").innerHTML = "Correct, well done!";
@@ -158,7 +160,7 @@ function checkMixedPaper() {
         document.getElementById(items[chosenItem]).style.display = "none";
         onCheck();
     } else {
-        document.getElementById("answerText").innerHTML = "DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???";
+        document.getElementById("answerText").innerHTML = "Incorrect, try again!";
         score--;
         life--;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -169,9 +171,11 @@ function checkMixedPaper() {
     }
 }
 
+/** ends the game when user lives reaches zero */
 function death() {
     if (life == 0) {
         document.getElementById("overlayCheck").style.display = "none";
+        //prompts user for their name
         setTimeout(function () {
             let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
             //databse
@@ -199,9 +203,9 @@ function death() {
 }
 
 
-
+/** ends the game */
 function endGame() {
-    let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
+    let userInput = prompt("ENDGAME! Please enter your name! Click on the leaderboard to see the scoreboard.");
     //databse
     if (userInput != "") {
         db.collection("scores").add({
@@ -223,7 +227,7 @@ function endGame() {
     return;
 }
 
-
+/** resets the game */
 function resetGame() {
     score = 0;
     document.getElementById("currentScore").innerHTML = "Score: ";
@@ -235,6 +239,7 @@ function resetGame() {
 document.getElementById("finishBtn").onclick = endGame;
 document.getElementById("restartBtn").onclick = resetGame;
 
+/** prompts user on how to play the game */
 function infoBox() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
