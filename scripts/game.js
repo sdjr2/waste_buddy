@@ -10,6 +10,11 @@ let life = 3;
 let song = new Audio();
 song.src = "src/song.mp3";
 
+// Sound effects
+let wrong = new Audio();
+wrong.src = "src/wrong.mp3";
+
+
 // Randomizes words
 let chosenItem = Math.floor(Math.random() * items.length);
 
@@ -43,14 +48,24 @@ function off() {
     randomItem();
 }
 
+// Overlay answer
+function onCheck() {
+    wrong.play();
+    document.getElementById("overlayCheck").style.display = "block";
+}
+
+// Continues game on click
+function offCheck() {
+    document.getElementById("overlayCheck").style.display = "none";
+    randomItem();
+}
+
 function checkRecyclables() {
     if (chosenItem == 1 || chosenItem == 2) {
-        console.log("WIN");
-        window.alert("Correct, well done!");
+        document.getElementById("answerText").innerHTML = "Correct, well done!";
         score++;
     } else {
-        console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
-        window.alert("Not quite, try again!");
+        document.getElementById("answerText").innerHTML = "DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???";
         score--;
         life--;
         death();
@@ -58,17 +73,15 @@ function checkRecyclables() {
     document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
-    randomItem();
+    onCheck();
 }
 
 function checkCompost() {
     if (chosenItem == 0 ||chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
-        console.log("DEVU IS PROUD");
-        window.alert("Correct, well done!");
+        document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
         score++;
     } else {
-        console.log("GO HOME BRO");
-        window.alert("Not quite, try again!");
+        document.getElementById("answerText").innerHTML = "GO HOME BRO";
         score--;
         life--;
         death();
@@ -76,17 +89,15 @@ function checkCompost() {
     document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
-    randomItem();
+    onCheck();
 }
 
 function checkRefundables() {
     if (chosenItem == 6 || chosenItem == 7 || chosenItem == 8) {
-        console.log("DEVU IS PROUD");
-        window.alert("Correct, well done!");
+        document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
         score++;
     } else {
-        console.log("GO HOME BRO");
-        window.alert("Not quite, try again!");
+        document.getElementById("answerText").innerHTML = "GO HOME BRO";
         score--;
         life--;
         death();
@@ -94,17 +105,15 @@ function checkRefundables() {
     document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
-    randomItem();
+    onCheck();
 }
 
 function checkMixedPaper() {
     if (chosenItem == 9 || chosenItem == 10) {
-        console.log("WIN");
-        window.alert("Correct, well done!");
+        document.getElementById("answerText").innerHTML = "Correct, well done!";
         score++;
     } else {
-        console.log("DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???");
-        window.alert("Not quite, try again!");
+        document.getElementById("answerText").innerHTML = "DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???";
         score--;
         life--;
         death();
@@ -112,7 +121,7 @@ function checkMixedPaper() {
     document.getElementById("lifeText").innerHTML = "Lives: " + life;
     document.getElementById("currentScore").innerHTML = "Score: " + score;
     document.getElementById(items[chosenItem]).style.display = "none";
-    randomItem();
+    onCheck();
 }
 
 function death() {
