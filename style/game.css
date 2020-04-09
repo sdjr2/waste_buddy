@@ -1,5 +1,16 @@
+.navbarText{
+    color: white;
+    text-decoration: underline;
+}
+
+#backgroundColor{
+    background-image: linear-gradient(#059E00, #98E583);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 #pageTitle {
-    padding-top: 40px;
     color: white;
     margin: 0 auto;
 }
@@ -272,10 +283,6 @@
     width: 1cm;
     height: 1cm;
     margin-left: 60px;
-}
-
-.scoreBox {
-    border: solid 1px grey;
 }
 
 .bottomClass {
