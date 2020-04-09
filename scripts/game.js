@@ -76,6 +76,16 @@ function offCheck() {
     randomItem();
 }
 
+// Overlay prompting user to restart game
+function onRestart() {
+    document.getElementById("overlayRestart").style.display = "block";
+}
+
+// Restarts the game
+function offRestart() {
+    location.reload();
+}
+
 function checkRecyclables() {
     if (chosenItem == 1 || chosenItem == 2) {
         document.getElementById("answerText").innerHTML = "Correct, well done!";
@@ -161,7 +171,7 @@ function death() {
         }
         console.log(name, score);
         alert(userInput + " your score is: " + score);
-        location.reload();
+        onRestart();
         return;
     }
 }
