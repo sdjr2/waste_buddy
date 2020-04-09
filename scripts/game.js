@@ -145,7 +145,7 @@ function death() {
         let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
         //databse
         if(userInput!=""){
-        db.collection("users").add({
+        db.collection("scores").add({
             username: userInput,
             score: score
         })
@@ -172,7 +172,7 @@ function endGame() {
     let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
     //databse
     if(userInput!=""){
-    db.collection("users").add({
+    db.collection("scores").add({
         username: userInput,
         score: score
     })
