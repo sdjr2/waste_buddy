@@ -1,3 +1,6 @@
+//time
+const TIME = 500;
+
 // Array of items
 let items = ["itemImage1", "itemImage2", "itemImage3", "itemImage4", "itemImage5", "itemImage6", "itemImage7", "itemImage8", "itemImage9", "itemImage10", "itemImage11"];
 let itemName = ["Item: garlic", "Item: coffee cup", "Item: milk container", "Item: fish", "Item: fruits", "Item: paper plate", "Item: juice box", "Item: pop can", "Item: water bottle", "Item: newsprint", "Item: books"];
@@ -16,18 +19,18 @@ let wrong = new Audio();
 wrong.src = "src/wrong.mp3";
 
 // Controls music
-function controlAudio(){
-    if (playing == true){
+function controlAudio() {
+    if (playing == true) {
         document.getElementById("soundIcon").src = "./images/sound.png";
         song.pause();
-    playing = false;
-    return;
+        playing = false;
+        return;
     }
-    if (playing == false){
+    if (playing == false) {
         document.getElementById("soundIcon").src = "./images/mute.png";
         song.play();
-    playing = true;
-    return;
+        playing = true;
+        return;
     }
 }
 
@@ -107,7 +110,7 @@ function checkRecyclables() {
 }
 
 function checkCompost() {
-    if (chosenItem == 0 ||chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
+    if (chosenItem == 0 || chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
         document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
         score++;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -169,27 +172,29 @@ function checkMixedPaper() {
 function death() {
     if (life == 0) {
         document.getElementById("overlayCheck").style.display = "none";
-        let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
-        //databse
-        if(userInput!=""){
-        db.collection("scores").add({
-            username: userInput,
-            score: score
-        })
-            .then(function (docRef) {
-                console.log("The id: " + docRef.id);
-            })
-            .catch(function (error) {
-                console.error("Error adding the document", error);
-            });
-        } else{
-            alert("please enter a name!")
+        setTimeout(function () {
+            let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
+            //databse
+            if (userInput != "") {
+                db.collection("scores").add({
+                        username: userInput,
+                        score: score
+                    })
+                    .then(function (docRef) {
+                        console.log("The id: " + docRef.id);
+                    })
+                    .catch(function (error) {
+                        console.error("Error adding the document", error);
+                    });
+            } else {
+                alert("please enter a name!")
+                return;
+            }
+            console.log(name, score);
+            alert(userInput + " your score is: " + score);
+            onRestart();
             return;
-        }
-        console.log(name, score);
-        alert(userInput + " your score is: " + score);
-        onRestart();
-        return;
+        }, TIME);
     }
 }
 
@@ -198,18 +203,18 @@ function death() {
 function endGame() {
     let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
     //databse
-    if(userInput!=""){
-    db.collection("scores").add({
-        username: userInput,
-        score: score
-    })
-        .then(function (docRef) {
-            console.log("The id: " + docRef.id);
-        })
-        .catch(function (error) {
-            console.error("Error adding the document", error);
-        });
-    } else{
+    if (userInput != "") {
+        db.collection("scores").add({
+                username: userInput,
+                score: score
+            })
+            .then(function (docRef) {
+                console.log("The id: " + docRef.id);
+            })
+            .catch(function (error) {
+                console.error("Error adding the document", error);
+            });
+    } else {
         alert("please enter a name!")
         return;
     }
@@ -219,7 +224,7 @@ function endGame() {
 }
 
 
-function resetGame(){
+function resetGame() {
     score = 0;
     document.getElementById("currentScore").innerHTML = "Score: ";
 
@@ -233,4 +238,4 @@ document.getElementById("restartBtn").onclick = resetGame;
 function infoBox() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
-  }
+}
