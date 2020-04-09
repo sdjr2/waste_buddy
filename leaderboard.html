@@ -26,7 +26,7 @@
             querySnapshot.forEach(function (doc) {
 
 
-                leaderboardTable.innerHTML += "<tr>" + "<td>" + doc.data().username + ": " + "</td>" +
+                leaderboardTable.innerHTML += "<tr>" + "<td>" + firebase.auth().currentUser.displayName + ": " + "</td>" +
                     "<td>" + doc.data().score + "</td>" + "</tr>"
 
             });

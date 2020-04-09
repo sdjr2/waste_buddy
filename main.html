@@ -14,13 +14,14 @@
     <div id="pageTitle">
       <h1>Waste Buddy</h1>
     </div>
+    <div id="welcomeMessage">
+      <b></b>
+    </div>
   </nav>
 
-  <div id="welcomeMessage">
-    <b>Welcome</b>
-  </div>
+
   <div id="bigBox">
-      <div id="boxTitle">
+    <div id="boxTitle">
         Sorting Game
       </div>
       <!-- Start game page button-->
@@ -30,7 +31,7 @@
         </div>
       </a>
     </div>
-
+  </div>
     <div id="bigBox">
       <div id="boxTitle">
         Breakdown of BCIT Bins
@@ -86,9 +87,8 @@
       const welcome = document.getElementById("welcomeMessage");
       const prev_Score = document.getElementById("previousScore");
       db.collection("users").onSnapshot(function (querySnapshot) {
-        querySnapshot.forEach(function (doc) {
-          welcome.innerHTML = "Welcome, " + doc.data().name;
-        });
+        console.log(firebase.auth().currentUser.displayName);
+        welcome.innerHTML = "Welcome, " + firebase.auth().currentUser.displayName;
       });
       
     </script>
