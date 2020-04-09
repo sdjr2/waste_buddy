@@ -171,7 +171,9 @@ function checkMixedPaper() {
     }
 }
 
-/** ends the game when user lives reaches zero */
+/** ends the game when user lives reaches zero 
+ *  add() - adds the username and score the endgame
+*/
 function death() {
     if (life == 0) {
         document.getElementById("overlayCheck").style.display = "none";
@@ -203,7 +205,10 @@ function death() {
 }
 
 
-/** ends the game */
+/** ends the game
+ *  add() - adds the username and score to the endgame
+ */
+
 function endGame() {
     let userInput = prompt("ENDGAME! Please enter your name! Click on the leaderboard to see the scoreboard.");
     //databse
