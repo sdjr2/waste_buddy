@@ -98,7 +98,7 @@ function checkRecyclables() {
         document.getElementById(items[chosenItem]).style.display = "none";
         onCheck();
     } else {
-        document.getElementById("answerText").innerHTML = "DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???";
+        document.getElementById("answerText").innerHTML = "Incorrect, Try again!";
         score--;
         life--;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -111,14 +111,14 @@ function checkRecyclables() {
 
 function checkCompost() {
     if (chosenItem == 0 || chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
-        document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
+        document.getElementById("answerText").innerHTML = "Correct, well done!";
         score++;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
         document.getElementById("currentScore").innerHTML = "Score: " + score;
         document.getElementById(items[chosenItem]).style.display = "none";
         onCheck();
     } else {
-        document.getElementById("answerText").innerHTML = "GO HOME BRO";
+        document.getElementById("answerText").innerHTML = "Incorrect, Try again!";
         score--;
         life--;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -131,14 +131,14 @@ function checkCompost() {
 
 function checkRefundables() {
     if (chosenItem == 6 || chosenItem == 7 || chosenItem == 8) {
-        document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
+        document.getElementById("answerText").innerHTML = "Correct, well done!";
         score++;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
         document.getElementById("currentScore").innerHTML = "Score: " + score;
         document.getElementById(items[chosenItem]).style.display = "none";
         onCheck();
     } else {
-        document.getElementById("answerText").innerHTML = "GO HOME BRO";
+        document.getElementById("answerText").innerHTML = "Incorrect, try again!";
         score--;
         life--;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -158,7 +158,7 @@ function checkMixedPaper() {
         document.getElementById(items[chosenItem]).style.display = "none";
         onCheck();
     } else {
-        document.getElementById("answerText").innerHTML = "DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???";
+        document.getElementById("answerText").innerHTML = "Incorrect, try again!";
         score--;
         life--;
         document.getElementById("lifeText").innerHTML = "Lives: " + life;
@@ -201,7 +201,7 @@ function death() {
 
 
 function endGame() {
-    let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
+    let userInput = prompt("ENDGAME! Please enter your name! Click on the leaderboard to see the scoreboard.");
     //databse
     if (userInput != "") {
         db.collection("scores").add({

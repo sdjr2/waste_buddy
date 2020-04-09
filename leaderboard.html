@@ -21,6 +21,12 @@
 <script src="scripts//firebase_api_wasteBuddy.js"> </script>
     
     <script>
+
+        /**
+         * orderBy()- ranks from increasing to decreasing order 
+         * limit()- sets the limit of the data to be shown in the table
+         * onSnapshot retrieves the real-time data from the database
+         */
        const list_div = document.getElementById("list_div");
         db.collection("scores").orderBy('score', 'desc').limit(10).onSnapshot(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
