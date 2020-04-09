@@ -90,68 +90,85 @@ function checkRecyclables() {
     if (chosenItem == 1 || chosenItem == 2) {
         document.getElementById("answerText").innerHTML = "Correct, well done!";
         score++;
+        document.getElementById("lifeText").innerHTML = "Lives: " + life;
+        document.getElementById("currentScore").innerHTML = "Score: " + score;
+        document.getElementById(items[chosenItem]).style.display = "none";
+        onCheck();
     } else {
         document.getElementById("answerText").innerHTML = "DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???";
         score--;
         life--;
+        document.getElementById("lifeText").innerHTML = "Lives: " + life;
+        document.getElementById("currentScore").innerHTML = "Score: " + score;
+        document.getElementById(items[chosenItem]).style.display = "none";
+        onCheck();
         death();
     }
-    document.getElementById("lifeText").innerHTML = "Lives: " + life;
-    document.getElementById("currentScore").innerHTML = "Score: " + score;
-    document.getElementById(items[chosenItem]).style.display = "none";
-    onCheck();
 }
 
 function checkCompost() {
     if (chosenItem == 0 ||chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
         document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
         score++;
+        document.getElementById("lifeText").innerHTML = "Lives: " + life;
+        document.getElementById("currentScore").innerHTML = "Score: " + score;
+        document.getElementById(items[chosenItem]).style.display = "none";
+        onCheck();
     } else {
         document.getElementById("answerText").innerHTML = "GO HOME BRO";
         score--;
         life--;
+        document.getElementById("lifeText").innerHTML = "Lives: " + life;
+        document.getElementById("currentScore").innerHTML = "Score: " + score;
+        document.getElementById(items[chosenItem]).style.display = "none";
+        onCheck();
         death();
     }
-    document.getElementById("lifeText").innerHTML = "Lives: " + life;
-    document.getElementById("currentScore").innerHTML = "Score: " + score;
-    document.getElementById(items[chosenItem]).style.display = "none";
-    onCheck();
 }
 
 function checkRefundables() {
     if (chosenItem == 6 || chosenItem == 7 || chosenItem == 8) {
         document.getElementById("answerText").innerHTML = "DEVU IS PROUD";
         score++;
+        document.getElementById("lifeText").innerHTML = "Lives: " + life;
+        document.getElementById("currentScore").innerHTML = "Score: " + score;
+        document.getElementById(items[chosenItem]).style.display = "none";
+        onCheck();
     } else {
         document.getElementById("answerText").innerHTML = "GO HOME BRO";
         score--;
         life--;
+        document.getElementById("lifeText").innerHTML = "Lives: " + life;
+        document.getElementById("currentScore").innerHTML = "Score: " + score;
+        document.getElementById(items[chosenItem]).style.display = "none";
+        onCheck();
         death();
     }
-    document.getElementById("lifeText").innerHTML = "Lives: " + life;
-    document.getElementById("currentScore").innerHTML = "Score: " + score;
-    document.getElementById(items[chosenItem]).style.display = "none";
-    onCheck();
 }
 
 function checkMixedPaper() {
     if (chosenItem == 9 || chosenItem == 10) {
         document.getElementById("answerText").innerHTML = "Correct, well done!";
         score++;
+        document.getElementById("lifeText").innerHTML = "Lives: " + life;
+        document.getElementById("currentScore").innerHTML = "Score: " + score;
+        document.getElementById(items[chosenItem]).style.display = "none";
+        onCheck();
     } else {
         document.getElementById("answerText").innerHTML = "DIDN'T YOUR MAMMA TEACH YOU HOW TO RECYCLE???";
         score--;
         life--;
+        document.getElementById("lifeText").innerHTML = "Lives: " + life;
+        document.getElementById("currentScore").innerHTML = "Score: " + score;
+        document.getElementById(items[chosenItem]).style.display = "none";
+        onCheck();
         death();
     }
-    document.getElementById("lifeText").innerHTML = "Lives: " + life;
-    document.getElementById("currentScore").innerHTML = "Score: " + score;
-    document.getElementById(items[chosenItem]).style.display = "none";
-    onCheck();
 }
 
 function death() {
     if (life == 0) {
+        document.getElementById("overlayCheck").style.display = "none";
         let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
         //databse
         if(userInput!=""){
