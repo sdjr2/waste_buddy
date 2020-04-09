@@ -9,11 +9,27 @@ let life = 3;
 // Sets music up
 let song = new Audio();
 song.src = "src/song.mp3";
+let playing = true;
 
 // Sound effects
 let wrong = new Audio();
 wrong.src = "src/wrong.mp3";
 
+// Controls music
+function controlAudio(){
+    if (playing == true){
+        document.getElementById("soundIcon").src = "./images/sound.png";
+        song.pause();
+    playing = false;
+    return;
+    }
+    if (playing == false){
+        document.getElementById("soundIcon").src = "./images/mute.png";
+        song.play();
+    playing = true;
+    return;
+    }
+}
 
 // Randomizes words
 let chosenItem = Math.floor(Math.random() * items.length);
