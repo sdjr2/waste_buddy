@@ -1,11 +1,10 @@
-
 h1 {
     color: black;
     font-size: 4vw;
     text-align: center;
     text-decoration: lightgrey;
     border: 0.5vh solid black;
- 
+
 }
 
 body {
@@ -17,7 +16,7 @@ body {
 
 
 #back {
-      width: 2vh;
+    width: 2vh;
     height: 7vh;
     text-decoration: none;
     text-emphasis-color: black;
@@ -26,10 +25,10 @@ body {
 }
 
 
-#backbutton{
+#backbutton {
     position: absolute;
     top: 12%;
-    right:1%;
+    right: 1%;
 
 }
 
@@ -45,7 +44,7 @@ body {
 }
 
 #list_div tr {
-    
+
     border-style: double;
     border-color: light;
 }
@@ -59,7 +58,7 @@ body {
 }
 
 #list_div tbody {
-    
+
     border-style: solid;
     border-color: black;
     font-size: 3vh;

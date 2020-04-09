@@ -5,7 +5,7 @@ body {
     background-attachment: fixed;
 }
 
-#activeLink:hover{
+#activeLink:hover {
     text-decoration: underline;
 }
 
@@ -17,7 +17,7 @@ body {
     text-decoration: underline;
 }
 
-#login:hover{
+#login:hover {
     font-weight: bold;
 }
 
@@ -56,7 +56,7 @@ body {
     line-height: 80px;
 }
 
-#sortingGameStart:hover{
+#sortingGameStart:hover {
     border-width: 5px;
     background-color: black;
     color: white;

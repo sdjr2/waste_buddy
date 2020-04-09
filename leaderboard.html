@@ -1,33 +1,34 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WasteBuddy Leaderboard</title>
     <link rel="stylesheet" type="text/css" href="./style/leaderboard.css">
 </head>
+
 <body>
-  
+
     <button type="button" id="backbutton"><a id="back" href="game.html">Back to Game!</a></button>
-<h1>Leaderboard</h1>
-<div  id="list_div">   
-    <table id="leaderboardTable">
+    <h1>Leaderboard</h1>
+    <div id="list_div">
+        <table id="leaderboardTable">
 
-    </table>
-</div>
+        </table>
+    </div>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
-<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-<script src="scripts//firebase_api_wasteBuddy.js"> </script>
-    
-    <script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="scripts//firebase_api_wasteBuddy.js"> </script>
 
+    <script>
         /**
          * orderBy()- ranks from increasing to decreasing order 
          * limit()- sets the limit of the data to be shown in the table
          * onSnapshot retrieves the real-time data from the database
          */
-       const list_div = document.getElementById("list_div");
+        const list_div = document.getElementById("list_div");
         db.collection("scores").orderBy('score', 'desc').limit(10).onSnapshot(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
 
@@ -37,8 +38,7 @@
 
             });
         });
-
-  
     </script>
 </body>
-</html> 
+
+</html>

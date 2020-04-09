@@ -12,12 +12,14 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <h1 class="navbar-brand">Waste Buddy</h1>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav" id="navbarText">
-        <a class="nav-item nav-link active" id="activeLink" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" id="activeLink" href="index.html">Home <span
+            class="sr-only">(current)</span></a>
         <a class="nav-item nav-link active" id="activeLink" href="game.html">Game</a>
         <a class="nav-item nav-link disabled" href="#">Bin Breakdown</a>
         <a class="nav-item nav-link disabled" href="#">Where Does My Waste Go?</a>
@@ -33,80 +35,77 @@
     <div id="boxTitle">
       Sorting Game
     </div>
-      <!-- Start game page button-->
-      <a href="game.html" style=" color: black;">
-        <div id="sortingGameStart">
-          Start Game
-        </div>
-      </a>
+    <!-- Start game page button-->
+    <a href="game.html" style=" color: black;">
+      <div id="sortingGameStart">
+        Start Game
+      </div>
+    </a>
+  </div>
+  </div>
+  <div id="bigBox">
+    <div id="boxTitle">
+      Breakdown of BCIT Bins
+    </div>
+    <div id="binBox">
+      <img src="./images/bins.png" id="binPic">
     </div>
   </div>
-    <div id="bigBox">
-      <div id="boxTitle">
-        Breakdown of BCIT Bins
+
+  <div id="bigBox">
+    <div id="boxTitleLessPadding">
+      Where Does my Waste Go?
+    </div>
+    <div id="searchBox">
+      <div id="searchImage">
+        <img src="./images/magnifyglass.png" height="25px" width="25px">
       </div>
-      <div id="binBox">
-        <img src="./images/bins.png" id="binPic">
+      <div id="searchText">
+        <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+        </form>
       </div>
     </div>
 
-    <div id="bigBox">
-      <div id="boxTitleLessPadding">
-        Where Does my Waste Go?
-      </div>
-      <div id="searchBox">
-        <div id="searchImage">
-          <img src="./images/magnifyglass.png" height="25px" width="25px">
-        </div>
-        <div id="searchText">
-          <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-            <i class="fas fa-search" aria-hidden="true"></i>
-            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-          </form>
-        </div>
-      </div>
+  </div>
 
+  <div id="smallBox">
+    <div id="boxTitle">
+      <!--Resource page-->
+      <a href="#" style="color: black;">Where can I learn more?</a>
     </div>
+  </div>
 
-    <div id="smallBox">
-      <div id="boxTitle">
-        <!--Resource page-->
-        <a href="#" style="color: black;">Where can I learn more?</a>
-      </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
 
-<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
-<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-<script src="scripts//firebase_api_wasteBuddy.js"> </script>
-    <script>
-
-
-      /**
-       * Using the onSnapshot, we can retrieve the real time change that occurs in the data.
-       * to display the welcome we are retreiving the information using a firebase authorisation method that holds the
-       * information of the current logged in user.
-       * */
-      const welcome = document.getElementById("welcomeMessage");
-      const prev_Score = document.getElementById("previousScore");
-      db.collection("users").onSnapshot(function (querySnapshot) {
-        console.log(firebase.auth().currentUser.displayName);
-        welcome.innerHTML = "Welcome, " + firebase.auth().currentUser.displayName;
-      });
-      
-    </script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="scripts//firebase_api_wasteBuddy.js"> </script>
+  <script>
+    /**
+     * Using the onSnapshot, we can retrieve the real time change that occurs in the data.
+     * to display the welcome we are retreiving the information using a firebase authorisation method that holds the
+     * information of the current logged in user.
+     * */
+    const welcome = document.getElementById("welcomeMessage");
+    const prev_Score = document.getElementById("previousScore");
+    db.collection("users").onSnapshot(function (querySnapshot) {
+      console.log(firebase.auth().currentUser.displayName);
+      welcome.innerHTML = "Welcome, " + firebase.auth().currentUser.displayName;
+    });
+  </script>
 
 </body>
 
