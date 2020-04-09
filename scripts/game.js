@@ -161,7 +161,7 @@ function death() {
         }
         console.log(name, score);
         alert(userInput + " your score is: " + score);
-        location.reload();
+        //location.reload();
         return;
     }
 }
