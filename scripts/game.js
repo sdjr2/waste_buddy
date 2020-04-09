@@ -62,7 +62,7 @@ function checkRecyclables() {
 }
 
 function checkCompost() {
-    if (chosenItem == 0 || chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
+    if (chosenItem == 0 ||chosenItem == 3 || chosenItem == 4 || chosenItem == 5) {
         console.log("DEVU IS PROUD");
         window.alert("Correct, well done!");
         score++;
@@ -115,46 +115,25 @@ function checkMixedPaper() {
     randomItem();
 }
 
-
-//let user = firebase.auth().currentUser;
 function death() {
     if (life == 0) {
-        alert("GAME OVER! No more Lives left. Click on the leaderboard to see the scoreboard.");
+        let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
         //databse
-        firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            db.collection("users").update({
-                score: score
+        if(userInput!=""){
+        db.collection("scores").add({
+            username: userInput,
+            score: score
+        })
+            .then(function (docRef) {
+                console.log("The id: " + docRef.id);
             })
-                .then(function (docRef) {
-                    console.log("The id: " + docRef.id);
-                })
-                .catch(function (error) {
-                    console.error("Error adding the document", error);
-                });
-        } else {
-            username = prompt("Please Enter your name");
-            db.collection("users").add({
-                name: username
-            })
-                .then(function (docRef) {
-                    console.log("The id: " + docRef.id);
-                })
-                .catch(function (error) {
-                    console.error("Error adding the document", error);
-                });
-    
-            db.collection("user").update({
-                score: score
-            })
-                .then(function (docRef) {
-                    console.log("The id: " + docRef.id);
-                })
-                .catch(function (error) {
-                    console.error("Error adding the document", error);
-                });
+            .catch(function (error) {
+                console.error("Error adding the document", error);
+            });
+        } else{
+            alert("please enter a name!")
+            return;
         }
-    });
         console.log(name, score);
         alert(userInput + " your score is: " + score);
         location.reload();
@@ -165,50 +144,30 @@ function death() {
 
 
 function endGame() {
-    alert("GAME OVER! No more Lives left. Click on the leaderboard to see the scoreboard.");
+    let userInput = prompt("GAME OVER! No more Lives left. Please enter your name! Click on the leaderboard to see the scoreboard.");
     //databse
-    firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        db.collection("users").update({
-            score: score
+    if(userInput!=""){
+    db.collection("scores").add({
+        username: userInput,
+        score: score
+    })
+        .then(function (docRef) {
+            console.log("The id: " + docRef.id);
         })
-            .then(function (docRef) {
-                console.log("The id: " + docRef.id);
-            })
-            .catch(function (error) {
-                console.error("Error adding the document", error);
-            });
-    } else {
-        username = prompt("Please Enter your name");
-        db.collection("users").add({
-            name: username
-        })
-            .then(function (docRef) {
-                console.log("The id: " + docRef.id);
-            })
-            .catch(function (error) {
-                console.error("Error adding the document", error);
-            });
-
-        db.collection("user").update({
-            score: score
-        })
-            .then(function (docRef) {
-                console.log("The id: " + docRef.id);
-            })
-            .catch(function (error) {
-                console.error("Error adding the document", error);
-            });
+        .catch(function (error) {
+            console.error("Error adding the document", error);
+        });
+    } else{
+        alert("please enter a name!")
+        return;
     }
-});
     console.log(name, score);
-    alert("Your score is: " + score);
+    alert(userInput + " your score is: " + score);
     return;
 }
 
 
-
-function resetGame() {
+function resetGame(){
     score = 0;
     document.getElementById("currentScore").innerHTML = "Score: ";
 
@@ -222,4 +181,4 @@ document.getElementById("restartBtn").onclick = resetGame;
 function infoBox() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
-}
+  }
