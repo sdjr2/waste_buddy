@@ -85,7 +85,7 @@ function onRestart() {
     document.getElementById("overlayRestart").style.display = "block";
 }
 
-/** Restarts the game */
+/** Restarts the game */ 
 function offRestart() {
     location.reload();
 }
@@ -173,7 +173,7 @@ function checkMixedPaper() {
 
 /** ends the game when user lives reaches zero 
  *  add() - adds the username and score the endgame
- */
+*/
 function death() {
     if (life == 0) {
         document.getElementById("overlayCheck").style.display = "none";
